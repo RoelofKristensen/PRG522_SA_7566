@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Content/animate.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/cubeportfolio.min.css">
+    <link rel="stylesheet" href="~/Content/font-awesome.css">
+    <link rel="stylesheet" href="~/Content/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/Content/magnific-popup.min.css">
+    <link rel="stylesheet" href="~/Content/owl-carousel.min.css">
+    <link rel="stylesheet" href="~/Content/slicknav.min.css">
+
+    <!-- Bizwheel Stylesheet -->
+    <link rel="stylesheet" href="~/Content/reset.css">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+    <!-- using PRG522_SA_7566.Models   model PRG522_SA_7566.Models.RegisterViewModel-->
+</head>
+<body>
+    <header class="header" style="border-top:-50">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <!-- Top Contact -->
+                        <div class="top-contact">
+                            <div class="single-contact"><i class="fa fa-phone"></i>Phone: 0814547802</div>
+                            <div class="single-contact"><i class="fa fa-envelope-open"></i>Email: 7566@ctucareer.com</div>
+                            <div class="single-contact"><i class="fa fa-clock-o"></i>Opening: 08AM - 09PM</div>
+                        </div>
+                        <!-- End Top Contact -->
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="topbar-right">
+                            <!-- Social Icons -->
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+
+                            @Html.Partial("_LoginPartial")
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Topbar -->
+        <!-- Middle Header -->
+        <div class="middle-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="middle-inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <!-- Logo -->
+                                    <div class="logo">
+                                        <!-- Image Logo -->
+                                        <div class="img-logo">
+                                            <a href="index.html">
+                                                <img src="~/img/logo.png" alt="#" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-nav">
+                                        <div class="slicknav_menu">
+                                            <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                                                <li><a href="index.html" role="menuitem" tabindex="-1">Home</a></li>
+                                                <li><a href="services.html" role="menuitem" tabindex="-1">Our Services</a></li>
+                                                <li><a href="portfolio.html" role="menuitem" tabindex="-1">Our Portfolio</a></li>
+                                                <li class="icon-active slicknav_collapsed slicknav_parent">
+                                                    <a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                                        <a href="#" tabindex="-1">Blog</a>
+                                                        <span class="slicknav_arrow">►</span>
+                                                    </a><ul class="sub-menu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                                        <li><a href="blog.html" role="menuitem" tabindex="-1">Blog Grid</a></li>
+                                                        <li><a href="blog-single.html" role="menuitem" tabindex="-1">Blog Single</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon-active slicknav_collapsed slicknav_parent">
+                                                    <a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                                        <a href="#" tabindex="-1">Pages</a>
+                                                        <span class="slicknav_arrow">►</span>
+                                                    </a><ul class="sub-menu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                                        <li><a href="about.html" role="menuitem" tabindex="-1">About Us</a></li>
+                                                        <li><a href="404.html" role="menuitem" tabindex="-1">404</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html" role="menuitem" tabindex="-1">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-12">
+                                    <div class="menu-area">
+                                        <!-- Main Menu -->
+                                        <nav class="navbar navbar-expand-lg">
+                                            <div class="navbar-collapse">
+                                                <div class="nav-inner">
+                                                    <div class="menu-home-menu-container">
+                                                        <!-- Naviagiton -->
+                                                        <ul id="nav" class="nav main-menu menu navbar-nav">
+                                                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                                            <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                                                            <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
+                                                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                                                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                                        </ul>
+                                                        <!--/ End Naviagiton -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <!--/ End Main Menu -->
+                                        <!-- Right Bar -->
+                                        <div class="right-bar">
+                                            <!-- Search Bar -->
+                                            <ul class="right-nav">
+                                                <li class="top-search"><a href="#0"><i class="fa fa-search"></i></a></li>
+                                                <li class="bar"><a class="fa fa-bars"></a></li>
+                                            </ul>
+                                            <!--/ End Search Bar -->
+                                            <!-- Search Form -->
+                                            <div class="search-top">
+                                                <form action="#" class="search-form" method="get">
+                                                    <input type="text" name="s" value="" placeholder="Search here">
+                                                    <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                                                </form>
+                                            </div>
+                                            <!--/ End Search Form -->
+                                        </div>
+                                        <!--/ End Right Bar -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Middle Header -->
+        <!-- Sidebar Popup -->
+        <div class="sidebar-popup">
+            <div class="cross">
+                <a class="btn"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="single-content">
+                <h4>About Bizwheel</h4>
+                <p>The main component of a healthy environment for self esteem is that it needs be nurturing. It should provide unconditional warmth.</p>
+                <!-- Social Icons -->
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+            <div class="single-content">
+                <h4>Important Links</h4>
+                <ul class="links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Pricing Plan</a></li>
+                    <li><a href="#">Blog &amp; News</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--/ Sidebar Popup -->
+    </header>
+
+        @RenderBody()
+        <hr />
+        <footer class="footer" style="background-image:url('img/map.png')">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Footer About -->
+                            <div class="single-widget footer-about widget">
+                                <div class="logo">
+                                    <div class="img-logo">
+                                        <a class="logo" href="index.html">
+                                            <img class="img-responsive" src="~/img/logo2.png" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer-widget-about-description">
+                                    <p>Beatae vitae dicta su explicabo nemo enim ipsam voluptatem quia voluptas sitBeatae vitae sitBeatae vitae dicta suntania..</p>
+                                </div>
+                                <div class="social">
+                                    <!-- Social Icons -->
+                                    <ul class="social-icons">
+                                        <li><a class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a class="pinterest" href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                                        <li><a class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="button">
+                                    <li class="bizwheel-btn">@Html.ActionLink("About us", "About", "Home")</li>
+                                </div>
+                            </div>
+                            <!--/ End Footer About -->
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <!-- Footer Links -->
+                            <div class="single-widget f-link widget">
+                                <h3 class="widget-title">Company</h3>
+                                <ul>
+
+                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                                    <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
+
+                                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                                </ul>
+                            </div>
+                            <!--/ End Footer Links -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Footer News -->
+                            <div class="single-widget footer-news widget">
+                                <h3 class="widget-title">Blog Page</h3>
+                                <!-- Single News -->
+                                <div class="single-f-news">
+                                    <div class="post-thumb"><a href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a></div>
+                                    <div class="content">
+                                        <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i>August 27, 2021</time></p>
+                                        <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single News -->
+                                <!-- Single News -->
+                                <div class="single-f-news">
+                                    <div class="post-thumb"><a href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a></div>
+                                    <div class="content">
+                                        <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i>April 10, 2020</time></p>
+                                        <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single News -->
+                            </div>
+                            <!--/ End Footer News -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Footer Contact -->
+                            <div class="single-widget footer_contact widget">
+                                <h3 class="widget-title">Contact</h3>
+                                <p>Beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem</p>
+                                <ul class="address-widget-list">
+                                    <li class="footer-mobile-number"><i class="fa fa-phone"></i>+(600) 125-4985-214</li>
+                                    <li class="footer-mobile-number"><i class="fa fa-envelope"></i>info@yoursite.com</li>
+                                    <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>1st Floor, Pretty Suites Office Block</li>
+                                </ul>
+                            </div>
+                            <!--/ End Footer Contact -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                            <!-- Footer Newsletter -->
+                            <div class="footer-newsletter">
+                                <form action="#" method="post" class="newsletter-area">
+                                    <input type="email" placeholder="Your email address">
+                                    <button type="submit">Sign Up</button>
+                                </form>
+                            </div>
+                            <!--/ End Footer Newsletter -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright-content">
+                                <!-- Copyright Text -->
+                                <p>© Copyright <a href="#">PRGSummative</a> - <a target="_blank" href="#">Roelof Kristensen</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Copyright -->
+        </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
